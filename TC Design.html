@@ -1,0 +1,2112 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>The design of traffic control - IMS health and safety</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-principles" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="IMS health and safety" class="md-header__button md-logo" aria-label="IMS health and safety" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IMS health and safety
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The design of traffic control
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="IMS health and safety" class="md-nav__button md-logo" aria-label="IMS health and safety" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IMS health and safety
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Legal introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Legal introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Legal introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Legal%20introduction.html" class="md-nav__link">
+        Understanding the legislation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Canada%20labour%20code%20part%202.html" class="md-nav__link">
+         Part 2 of the labor code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="regulations.html" class="md-nav__link">
+        The regulations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Company%20policy.html" class="md-nav__link">
+         Company policy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ppe.html" class="md-nav__link">
+         Personal protective equipment
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Duties
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Duties" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Duties
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Duties%20interpretation.html" class="md-nav__link">
+        Work place defined
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Employer%20duties.html" class="md-nav__link">
+        Employer duties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Employee%20duties.html" class="md-nav__link">
+        Employee duties
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Employee rights
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Employee rights" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Employee rights
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="The%20right%20to%20know.html" class="md-nav__link">
+        The right to know
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="The%20right%20to%20participate.html" class="md-nav__link">
+        The right to participate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="The%20right%20to%20be%20heard.html" class="md-nav__link">
+        The right to be heard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="refusal%20to%20work.html" class="md-nav__link">
+        the right to refuse work
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Regulations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Regulations" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Regulations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="regulations.html" class="md-nav__link">
+        Regulations
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Trenches
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Trenches" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Trenches
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Trenches.html" class="md-nav__link">
+        Trenches
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          electrical safety
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="electrical safety" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          electrical safety
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="electrical%20safety%20fundamentals.html" class="md-nav__link">
+        The fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="grounding.html" class="md-nav__link">
+        Grounding
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="electrical%20hazards%20aloft.html" class="md-nav__link">
+        Electrical hazards on the ladder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="downed%20power%20lines.html" class="md-nav__link">
+        Downed power lines
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Electrical%20injury.html" class="md-nav__link">
+        Electrical injuries
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Working at heights
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Working at heights" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Working at heights
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="General%20ladder%20use.html" class="md-nav__link">
+        Ladder preliminaries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Heights%20standards.html" class="md-nav__link">
+        Heights standards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Pole%20Inspection.html" class="md-nav__link">
+        Pole Inspection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Rope%20Rescue.html" class="md-nav__link">
+        Rope Rescue
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Using the ladders
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Using the ladders" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Using the ladders
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ladder%20materials.html" class="md-nav__link">
+        Ladder materials
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transporting%20the%20ladder.html" class="md-nav__link">
+        Ladder storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="placing%20the%20ladder.html" class="md-nav__link">
+        Legal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Traversing%20the%20ladders.html" class="md-nav__link">
+        climbing the ladders
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="working%20on%20the%20ladder.html" class="md-nav__link">
+        Working on the ladders
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Traffic control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Traffic control" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Traffic control
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TC%20purpose.html" class="md-nav__link">
+        The purpose of traffic control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          The design of traffic control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="TC%20Design.html" class="md-nav__link md-nav__link--active">
+        The design of traffic control
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-principles" class="md-nav__link">
+    The principles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plans" class="md-nav__link">
+    Plans
+  </a>
+  
+    <nav class="md-nav" aria-label="Plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traffic-protection-plan" class="md-nav__link">
+    Traffic protection plan
+  </a>
+  
+    <nav class="md-nav" aria-label="Traffic protection plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-effective-plan" class="md-nav__link">
+    An effective plan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-control-plan" class="md-nav__link">
+    Traffic control plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developing-a-traffic-control-plan" class="md-nav__link">
+    Developing a traffic control plan
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing a traffic control plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-work-evaluation" class="md-nav__link">
+    Pre work evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-management" class="md-nav__link">
+    Speed management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedestrians" class="md-nav__link">
+    Pedestrians
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#night-time-provisions" class="md-nav__link">
+    Night time provisions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-zone-lighting" class="md-nav__link">
+    Work zone lighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anti-glare-screening" class="md-nav__link">
+    Anti-glare screening
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-considerations" class="md-nav__link">
+    Additional considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadway-environment" class="md-nav__link">
+    Roadway environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadway environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#highway" class="md-nav__link">
+    Highway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadway" class="md-nav__link">
+    Roadway
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-sections" class="md-nav__link">
+    Cross sections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeway" class="md-nav__link">
+    Freeway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-volume" class="md-nav__link">
+    Traffic volume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rural-v-urban" class="md-nav__link">
+    Rural v Urban
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurations-for-temporary-conditions" class="md-nav__link">
+    Configurations for temporary conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurations for temporary conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#off-shoulder" class="md-nav__link">
+    Off-shoulder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoulder" class="md-nav__link">
+    Shoulder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lane-encroachment" class="md-nav__link">
+    Lane encroachment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-lane-shift" class="md-nav__link">
+    Partial lane shift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lane-closure" class="md-nav__link">
+    Lane closure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detours" class="md-nav__link">
+    Detours
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-closures" class="md-nav__link">
+    Rolling closures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-areas-for-temporary-conditions" class="md-nav__link">
+    Component areas for temporary conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Component areas for temporary conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#areas" class="md-nav__link">
+    Areas
+  </a>
+  
+    <nav class="md-nav" aria-label="Areas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advance-warning-area" class="md-nav__link">
+    Advance warning area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approach-area" class="md-nav__link">
+    Approach area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-area" class="md-nav__link">
+    Transition area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitudinal-buffer-area" class="md-nav__link">
+    Longitudinal buffer area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-area" class="md-nav__link">
+    Work area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termination-area" class="md-nav__link">
+    Termination area
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-considerations-in-component-area-design" class="md-nav__link">
+    Additional considerations in component area design
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional considerations in component area design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingress-and-egress" class="md-nav__link">
+    Ingress and egress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-space-restrictions" class="md-nav__link">
+    Linear space restrictions
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear space restrictions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urban-low-speed-area" class="md-nav__link">
+    Urban low speed area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeways" class="md-nav__link">
+    Freeways
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal-and-vertical-clearance" class="md-nav__link">
+    Horizontal and vertical clearance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-durations" class="md-nav__link">
+    Work durations
+  </a>
+  
+    <nav class="md-nav" aria-label="Work durations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mobile-operation" class="md-nav__link">
+    Mobile operation.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#very-short-duration" class="md-nav__link">
+    very short duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-duration" class="md-nav__link">
+    short duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-duration" class="md-nav__link">
+    Long duration.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TC%20methods.html" class="md-nav__link">
+         Traffic Control Methods
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TC%20implement.html" class="md-nav__link">
+         Traffic control implementations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="TC%20legal.html" class="md-nav__link">
+         Traffic control legal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-principles" class="md-nav__link">
+    The principles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plans" class="md-nav__link">
+    Plans
+  </a>
+  
+    <nav class="md-nav" aria-label="Plans">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#traffic-protection-plan" class="md-nav__link">
+    Traffic protection plan
+  </a>
+  
+    <nav class="md-nav" aria-label="Traffic protection plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#an-effective-plan" class="md-nav__link">
+    An effective plan
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-control-plan" class="md-nav__link">
+    Traffic control plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developing-a-traffic-control-plan" class="md-nav__link">
+    Developing a traffic control plan
+  </a>
+  
+    <nav class="md-nav" aria-label="Developing a traffic control plan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-work-evaluation" class="md-nav__link">
+    Pre work evaluation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speed-management" class="md-nav__link">
+    Speed management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pedestrians" class="md-nav__link">
+    Pedestrians
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#night-time-provisions" class="md-nav__link">
+    Night time provisions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-zone-lighting" class="md-nav__link">
+    Work zone lighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anti-glare-screening" class="md-nav__link">
+    Anti-glare screening
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-considerations" class="md-nav__link">
+    Additional considerations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadway-environment" class="md-nav__link">
+    Roadway environment
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadway environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#highway" class="md-nav__link">
+    Highway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roadway" class="md-nav__link">
+    Roadway
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-sections" class="md-nav__link">
+    Cross sections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeway" class="md-nav__link">
+    Freeway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-volume" class="md-nav__link">
+    Traffic volume
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rural-v-urban" class="md-nav__link">
+    Rural v Urban
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurations-for-temporary-conditions" class="md-nav__link">
+    Configurations for temporary conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Configurations for temporary conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#off-shoulder" class="md-nav__link">
+    Off-shoulder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shoulder" class="md-nav__link">
+    Shoulder
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lane-encroachment" class="md-nav__link">
+    Lane encroachment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partial-lane-shift" class="md-nav__link">
+    Partial lane shift
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lane-closure" class="md-nav__link">
+    Lane closure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detours" class="md-nav__link">
+    Detours
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-closures" class="md-nav__link">
+    Rolling closures
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-areas-for-temporary-conditions" class="md-nav__link">
+    Component areas for temporary conditions
+  </a>
+  
+    <nav class="md-nav" aria-label="Component areas for temporary conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#areas" class="md-nav__link">
+    Areas
+  </a>
+  
+    <nav class="md-nav" aria-label="Areas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advance-warning-area" class="md-nav__link">
+    Advance warning area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approach-area" class="md-nav__link">
+    Approach area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transition-area" class="md-nav__link">
+    Transition area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longitudinal-buffer-area" class="md-nav__link">
+    Longitudinal buffer area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-area" class="md-nav__link">
+    Work area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termination-area" class="md-nav__link">
+    Termination area
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-considerations-in-component-area-design" class="md-nav__link">
+    Additional considerations in component area design
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional considerations in component area design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ingress-and-egress" class="md-nav__link">
+    Ingress and egress
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linear-space-restrictions" class="md-nav__link">
+    Linear space restrictions
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear space restrictions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urban-low-speed-area" class="md-nav__link">
+    Urban low speed area
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#freeways" class="md-nav__link">
+    Freeways
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal-and-vertical-clearance" class="md-nav__link">
+    Horizontal and vertical clearance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-durations" class="md-nav__link">
+    Work durations
+  </a>
+  
+    <nav class="md-nav" aria-label="Work durations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mobile-operation" class="md-nav__link">
+    Mobile operation.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#very-short-duration" class="md-nav__link">
+    very short duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-duration" class="md-nav__link">
+    short duration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-duration" class="md-nav__link">
+    Long duration.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>The design of traffic control</h1>
+
+<p>The design of traffic control</p>
+<h2 id="the-principles">The principles</h2>
+<p>An effective work zone shall be designed to reflect the following principles.</p>
+<ul>
+<li>Worker safety.</li>
+<li>Road user safety.</li>
+<li>Mobility and accessibility.</li>
+<li>Communication and positive guidance.</li>
+<li>Consistency and uniformity.</li>
+<li>Constructability.</li>
+</ul>
+<p>The overall risk is greatly reduced by proper planning by keeping these and other factors in mind.
+Each work zone should be predictable and familiar to motorists. 
+Motorists should be able to follow along and not have to react in unfamiliar environments.</p>
+<div class="highlight"><pre><span></span><code>To apply these principles, a traffic control plan which conforms with legislated and road authority requirements should be developed before any work is performed.
+</code></pre></div>
+<h2 id="plans">Plans</h2>
+<h3 id="traffic-protection-plan">Traffic protection plan</h3>
+<p>This is a detailed plan developed for controlling traffic in a work zone and is required under the regulation for construction projects. 
+This plan is a general plan to protect workers exposed to vehicular traffic.</p>
+<p>``` Section 67 # O. Reg. 213/91: CONSTRUCTION PROJECTS
+    (4) Every employer shall develop in writing and implement a traffic protection plan for the employers’ workers at a project if any of them may be exposed to a hazard from vehicular traffic. O. Reg. 145/00, s. 21.
+<div class="highlight"><pre><span></span><code>Employers must develop a traffic control plan before work begins when their employees may be exposed to vehicular traffic. This plan should be regularly reviewed and assessed for a safe work environment.
+This will focus on protecting the worker performing their work and contain the means of protection employed. This will implement protections in all areas of their work.
+Workers must be trained in the procedures used to protect the workers.
+
+The traffic plan must also meet the following requirements, detailing the hazards and protections and shall remain on site for inspection.
+
+``` Section 67 # O. Reg. 213/91: CONSTRUCTION PROJECTS
+(5) The traffic protection plan,
+
+(a)  shall specify the vehicular traffic hazards and the measures described in subsection (2) to be used to protect workers; and
+
+(b)  shall be kept at the project and made available to an inspector or a worker on request. O. Reg. 145/00, s. 21.
+</code></pre></div></p>
+<p>The traffic protection plan comes from the Ontario construction regulations.</p>
+<h4 id="an-effective-plan">An effective plan</h4>
+<p>Includes the delegation of responsibilities and training standards and:
+- Lists PPE requirements.
+- Details procedures for inspections.
+- Details safe work practice and procedures.</p>
+<h3 id="traffic-control-plan">Traffic control plan</h3>
+<p>This is a plan detailing the specific work zone in question. 
+It will list and account for things like speed limits, visible obstructions. 
+It will also have detailed information on the plan to control traffic in that work zone.
+This is where traffic layouts will also be used to plan the work zone and layout.
+It will be kept on site and be reviewed and modified as needed.</p>
+<h3 id="developing-a-traffic-control-plan">Developing a traffic control plan</h3>
+<h4 id="pre-work-evaluation">Pre work evaluation</h4>
+<p>First a pre site evaluation should be done to take in to account the following.
+- Cross section geometry of the road and space.
+- Sightlines and the impact on stopping distances.
+- Operating and posted speeds. 
+- Volume of traffic, consider time of day and nearby areas with busy times like schools.
+- Existing traffic control devices and proximity of signals.
+- Accommodation of vulnerable road users.
+- Non traffic hazards like bridges or medians.
+- Visibility obstructions.
+- others.</p>
+<h4 id="speed-management">Speed management</h4>
+<p>There are several methods to assist with reduced speed limit compliance up to and including police presence.
+Table 3.8 and 3.9 lists methods and their effectiveness.</p>
+<h4 id="pedestrians">Pedestrians</h4>
+<p>Plan to protect pedestrians from exposure to the work zone. Safely replicate as closely as possible the original path placing signs in advance of the work area.</p>
+<p>If it is determined that work may put pedestrians in danger on the public way it is important to install proper protection.</p>
+<p>``` Section 65 # O. Reg. 213/91: CONSTRUCTION PROJECTS public way.
+  65. If work on a project may endanger a person using a public way, a sturdy fence at least 1.8 metres in height shall be constructed between the public way and the project. O. Reg. 213/91, s. 65.
+<div class="highlight"><pre><span></span><code>#### Cyclists (book 7 - 3.7.2)
+
+Cyclists should be planned for if they have a legal right to access the area the work zone is in. Their presence should be planned for with signage that indicates alternate routes without intruding into their paths.
+
+Accommodating cyclists can be done with the following.
+1. Converting the road to a shared roadway.
+2. Diverting cyclists to an alternate path.
+3. Detouring cyclist traffic.
+
+Alternate paths should consider their mode of travel, loose gravel or uneven roads are not suitable for them. Overhead obstructions should also be avoided.
+
+Avoid closing cyclist lanes and having cyclists dismount wherever possible.
+
+#### Reversals within the work area
+
+Work within the work area must try to eliminate reversing if possible. 
+If it is not a plan should be made to ensure the safety of workers when a reversal is needed to take place.
+We should always try to reverse into driveways because reversing out is a far greater risk to comply. 
+
+``` Section 104 # O. Reg. 213/91
+**104.** (1) Every project shall be planned and organized so that vehicles, machines and equipment are not operated in reverse or are operated in reverse as little as possible. O. Reg. 145/00, s. 27.
+</code></pre></div></p>
+<h4 id="night-time-provisions">Night time provisions</h4>
+<p>Use of night garments listed in the OSHA regulations should be used when working at night.</p>
+<p><code>Section 69.1 # O. Reg. 213/91: CONSTRUCTION PROJECTS 
+(4) In addition, a worker who may be endangered by vehicular traffic during night-time hours shall wear retro-reflective silver stripes encircling each arm and leg, or equivalent side visibility-enhancing stripes with a minimum area of 50 square centimetres per side. O. Reg. 145/00, s. 23.</code></p>
+<p>All vehicles must be equipped with four way flashers and amber 360 degree beacons.</p>
+<h4 id="work-zone-lighting">Work zone lighting</h4>
+<p>Adequate lighting should be used that is placed in a way so it will not blind oncoming motorists.</p>
+<h4 id="anti-glare-screening">Anti-glare screening</h4>
+<p>Used when working under limited lighting conditions and protects motorists from headlights used to light a work zone. these should not be used in winter because of drifting snow.</p>
+<h4 id="additional-considerations">Additional considerations</h4>
+<ul>
+<li>Drivers will not plan for delays unless warned ahead of time. Our work is intermittent and very short duration. proper active warning should be give to drivers to ensure they are prepared to stop.</li>
+<li>It is important to not confuse drivers and give clear instructions as to what to do with adequate time.</li>
+<li>Workers should remain in the work zone and if it in needed to work in the traffic lanes then preparations should be made in the planning stages to ensure safety of the workers.</li>
+<li>Routinely schedule inspections during different parts of the day to ensure as conditions change the plan is still effective.</li>
+<li>page 16</li>
+</ul>
+<h2 id="roadway-environment">Roadway environment</h2>
+<h3 id="highway">Highway</h3>
+<p>A general term for public ways transporting pedestrians or vehicular traffic.</p>
+<h3 id="roadway">Roadway</h3>
+<p>The part of the highway designed for the vehicular traffic, this does not include the shoulder or berm  (path or frass strip by the road).</p>
+<h4 id="cross-sections">Cross sections</h4>
+<p>This refers to the numbers of lanes and may be physically divided or undivided.</p>
+<h3 id="freeway">Freeway</h3>
+<p>This is a highway with the following criteria and must meet all.</p>
+<ol>
+<li>At least four lanes with two in each direction and a dividing median between the two directions.</li>
+<li>fully controlled access through interchanges.</li>
+<li>A speed limit of 90km/h or more.</li>
+</ol>
+<p>Exclusions to these exist when road authorities, based on the speed and or volume of traffic on the roadway designate it a freeway.</p>
+<h3 id="traffic-volume">Traffic volume</h3>
+<p>Low volume roads have a volume of less than 3000 vehicles per day.
+To determine the number of cars count the cars for 3 minutes and multiply the amount by 1000.
+Low volume is less than nine per three minute span with high volume traffic being greater than a nine vehicles per minute span.</p>
+<h3 id="rural-v-urban">Rural v Urban</h3>
+<p>Considerations differ greatly between rural and urban work areas. 
+In Rural areas you have less space, obstructions to visibility, traffic that is vehicular and pedestrian to consider.
+On the other hand urban areas have less obstruction, greater visibility, fewer pedestrians but will also see higher speeds.</p>
+<h2 id="configurations-for-temporary-conditions">Configurations for temporary conditions</h2>
+<p>This refers to the physical area requirements for the temporary work zone describing complexity and intrusion.</p>
+<h3 id="off-shoulder">Off-shoulder</h3>
+<p>May take place in right of way but work will not intrude into the shoulder of the roadway.</p>
+<h3 id="shoulder">Shoulder</h3>
+<p>Work on the shoulder but not on the travelled lanes.</p>
+<h3 id="lane-encroachment">Lane encroachment</h3>
+<p>Workers etc are located on the roadway and this occurs when the lane is reduced to less than 3 meters from the center line.</p>
+<h3 id="partial-lane-shift">Partial lane shift</h3>
+<p>When one lane is realigned (not closed but moved) to reroute traffic around the work area.</p>
+<h3 id="lane-closure">Lane closure</h3>
+<p>Used to redirect traffic by closing off a travelled lane.</p>
+<h3 id="detours">Detours</h3>
+<p>Any diversion from normal traffic that cannot be accommodated in the existing roadway.</p>
+<h3 id="rolling-closures">Rolling closures</h3>
+<p>Often used in short duration work this can involve the use of police vehicles, crash trucks or sign trucks to control speed or temporarily prevent vehicles from entering the work area.</p>
+<h2 id="component-areas-for-temporary-conditions">Component areas for temporary conditions</h2>
+<h3 id="areas">Areas</h3>
+<p>This comprises the entire area that the work will be performed in and includes several other areas within.</p>
+<h4 id="advance-warning-area">Advance warning area</h4>
+<p>An area used to inform motorists of upcoming road work. This is where the work ahead sign will be placed.</p>
+<h4 id="approach-area">Approach area</h4>
+<p>the area used to inform drivers of the upcoming traffic flow changes, it may be an arrow or a sign indicating the lanes will merge ahead.</p>
+<h4 id="transition-area">Transition area</h4>
+<p>At the beginning of the transition area it needs to be made obvious to the motorists what they should do with the placement of traffic control devices like cones or barrels.
+This area must be free of obstruction and personnel.</p>
+<h4 id="longitudinal-buffer-area">Longitudinal buffer area</h4>
+<p>This is a zone to allowing braking between the transition area and work area and should be kept clear of all obstruction.</p>
+<h4 id="work-area">Work area</h4>
+<p>This is where the work is performed and should be setup to minimize hazards and distractions.</p>
+<h4 id="termination-area">Termination area</h4>
+<p>Where traffic is redirected back to normal flow.</p>
+<h3 id="additional-considerations-in-component-area-design">Additional considerations in component area design</h3>
+<h4 id="ingress-and-egress">Ingress and egress</h4>
+<h4 id="linear-space-restrictions">Linear space restrictions</h4>
+<p>If space is not available to comply with book 7 for recommended area lengths then modifications may be needed. This may require extra traffic control devices or traffic control persons.</p>
+<h5 id="urban-low-speed-area">Urban low speed area</h5>
+<p>May contain closely spaced intersections, driveways or entrances. Modification to the component areas of a typical layout must be approved by the appropriate road authority.</p>
+<h5 id="freeways">Freeways</h5>
+<p>This may occur on interchanges and the tapers or LBA can be modified to compensate.</p>
+<h5 id="horizontal-and-vertical-clearance">Horizontal and vertical clearance</h5>
+<p>Workers and their equipment should remain inside the delineators or cones at all times. All horizontal work above ground must also be contained so as not to encroach above or in a live lane. Make sure that ladders do not cross the cones and keep the ladder on the right side of the truck.</p>
+<h3 id="work-durations">Work durations</h3>
+<p>There are now 5 categories of work duration in book 7.</p>
+<h4 id="mobile-operation">Mobile operation.</h4>
+<p>Work that is done with frequent stops or at a slow place. The second a boot hits the ground it becomes intermittent duration.</p>
+<p><em>Intermittent duration</em> new
+This is work for 15 minutes or less.</p>
+<h4 id="very-short-duration">very short duration</h4>
+<p>This is from 15 minutes up to 30 minutes.</p>
+<h4 id="short-duration">short duration</h4>
+<p>This is work setup from 31 minutes to less than 24 hours.</p>
+<h4 id="long-duration">Long duration.</h4>
+<p>This is a work zone setup for more than  24 hours.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="TC%20purpose.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: The purpose of traffic control" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              The purpose of traffic control
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="TC%20methods.html" class="md-footer__link md-footer__link--next" aria-label="Next:  Traffic Control Methods" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+               Traffic Control Methods
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.sections", "navigation.top", "navigation.instant", "navigation.expand"], "search": "assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>
